@@ -1,0 +1,52 @@
+No.     Time               Source                Destination           Protocol Length Info
+    288 21:10:09.680759    10.51.172.226         183.232.73.240        HTTP     319    GET /a49dcd8b-ae4f-4c06-bbe3-d8a229363187.j.live002.m3u8 HTTP/1.1 
+
+Frame 288: 319 bytes on wire (2552 bits), 319 bytes captured (2552 bits) on interface en0, id 0
+Ethernet II, Src: Apple_e8:cd:ed (8c:7a:aa:e8:cd:ed), Dst: RuijieNe_6b:29:b9 (14:14:4b:6b:29:b9)
+Internet Protocol Version 4, Src: 10.51.172.226, Dst: 183.232.73.240
+Transmission Control Protocol, Src Port: 54646, Dst Port: 40023, Seq: 1, Ack: 1, Len: 253
+Hypertext Transfer Protocol
+    GET /a49dcd8b-ae4f-4c06-bbe3-d8a229363187.j.live002.m3u8 HTTP/1.1\r\n
+        [Expert Info (Chat/Sequence): GET /a49dcd8b-ae4f-4c06-bbe3-d8a229363187.j.live002.m3u8 HTTP/1.1\r\n]
+            [GET /a49dcd8b-ae4f-4c06-bbe3-d8a229363187.j.live002.m3u8 HTTP/1.1\r\n]
+            [Severity level: Chat]
+            [Group: Sequence]
+        Request Method: GET
+        Request URI: /a49dcd8b-ae4f-4c06-bbe3-d8a229363187.j.live002.m3u8
+        Request Version: HTTP/1.1
+    Host: wwe5g.cdn.node.a.tddns-ounk.com\r\n
+    User-Agent: Go-http-client/1.1\r\n
+    Connection: Upgrade\r\n
+    Sec-WebSocket-Key: /CkweHZIZlPXWsiPulu2Kw==\r\n
+    Sec-WebSocket-Version: 13\r\n
+    Upgrade: websocket\r\n
+    \r\n
+    [Full request URI: http://wwe5g.cdn.node.a.tddns-ounk.com/a49dcd8b-ae4f-4c06-bbe3-d8a229363187.j.live002.m3u8]
+    [HTTP request 1/1]
+    [Response in frame: 304]
+
+No.     Time               Source                Destination           Protocol Length Info
+    304 21:10:09.883978    183.232.73.240        10.51.172.226         HTTP     195    HTTP/1.1 101 Switching Protocols 
+
+Frame 304: 195 bytes on wire (1560 bits), 195 bytes captured (1560 bits) on interface en0, id 0
+Ethernet II, Src: RuijieNe_6b:29:b9 (14:14:4b:6b:29:b9), Dst: Apple_e8:cd:ed (8c:7a:aa:e8:cd:ed)
+Internet Protocol Version 4, Src: 183.232.73.240, Dst: 10.51.172.226
+Transmission Control Protocol, Src Port: 40023, Dst Port: 54646, Seq: 1, Ack: 254, Len: 129
+Hypertext Transfer Protocol
+    HTTP/1.1 101 Switching Protocols\r\n
+        [Expert Info (Chat/Sequence): HTTP/1.1 101 Switching Protocols\r\n]
+            [HTTP/1.1 101 Switching Protocols\r\n]
+            [Severity level: Chat]
+            [Group: Sequence]
+        Response Version: HTTP/1.1
+        Status Code: 101
+        [Status Code Description: Switching Protocols]
+        Response Phrase: Switching Protocols
+    Upgrade: websocket\r\n
+    Connection: Upgrade\r\n
+    Sec-WebSocket-Accept: fFHf1+gaMloOiBe7J1wMV0178LE=\r\n
+    \r\n
+    [HTTP response 1/1]
+    [Time since request: 0.203219000 seconds]
+    [Request in frame: 288]
+    [Request URI: http://wwe5g.cdn.node.a.tddns-ounk.com/a49dcd8b-ae4f-4c06-bbe3-d8a229363187.j.live002.m3u8]
