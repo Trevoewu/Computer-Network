@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 extern struct rtpkt {
   int sourceid;   /* id of sending router sending this pkt */
@@ -9,6 +8,14 @@ extern struct rtpkt {
 extern int TRACE;
 extern int YES;
 extern int NO;
+// entry [i,j] in the distance table in node 0 is node 0's currently
+// computed cost to node i via direct neighbor j. If 0 is not directly
+// connected to j, you can ignore this entry. We will use the convention
+// that the integer value 999 is ``infinity.''
+//条目[i,j]是节点 0 当前计算的通过直接邻居 j 到节点 i 的成本.
+// 如果 0 没有直接连接到 j 则可以忽略此条目。我们将使用整数值 999
+// 为“无穷大”的约定。
+
 struct distance_table {
   int costs[4][4];
 } dt0;
@@ -26,26 +33,8 @@ int findMin(int arr[], int len) {
   }
   return min;
 }
-// entry [i,j] in the distance table in node 0 is node 0's currently
-// computed cost to node i via direct neighbor j. If 0 is not directly
-// connected to j, you can ignore this entry. We will use the convention
-// that the integer value 999 is ``infinity.''
-//条目[i,j]是节点 0 当前计算的通过直接邻居 j 到节点 i 的成本.
-// 如果 0 没有直接连接到 j 则可以忽略此条目。我们将使用整数值 999
-// 为“无穷大”的约定。
-
-/* students to write the following two routines, and maybe some others */
-void routerInit(int router, struct distance_table DTable, int neighborList[],
-                int neighborLen) {
-  printf("router %d is initializing", router);
-  for (int i = 0; i < 4; i++) {
-    for (int j = 0; j < 4; j++) {
-      DTable.costs[i][j] = 999;
-    }
-  }
-}
 void rtinit0() {
-  printf("node 0 initializing-------------\n");
+  printf("node 0 initializing...\n");
   for (int i = 0; i < 4; i++) {
     for (int j = 0; j < 4; j++) {
       dt0.costs[i][j] = 999;
