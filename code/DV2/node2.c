@@ -24,7 +24,7 @@ extern int findMin(int arr[], int len);
 struct distance_table {
   int costs[4][4];
 } dt2;
-
+void printdt2(struct distance_table *dtptr);
 /* students to write the following two routines, and maybe some others */
 
 void rtinit2() {
@@ -63,7 +63,7 @@ void rtupdate2(rcvdpkt) struct rtpkt *rcvdpkt;
         min(dt2.costs[i][rcvdpkt->sourceid],
             rcvdpkt->mincost[i] + dt2.costs[rcvdpkt->sourceid][2]);
   }
-
+  printdt2(&dt2);
   struct rtpkt adv;
   for (int i = 0; i < 4; i++) {
     adv.mincost[i] = findMin(dt2.costs[i], 4);

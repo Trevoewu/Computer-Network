@@ -26,7 +26,7 @@ struct distance_table {
 } dt1;
 
 /* students to write the following two routines, and maybe some others */
-
+void printdt1(struct distance_table *dtptr);
 void rtinit1() {
   printf("node 1 initializing-------------\n");
   for (int i = 0; i < 4; i++) {
@@ -60,6 +60,7 @@ void rtupdate1(rcvdpkt) struct rtpkt *rcvdpkt;
         min(dt1.costs[i][rcvdpkt->sourceid],
             rcvdpkt->mincost[i] + dt1.costs[rcvdpkt->sourceid][1]);
   }
+  printdt1(&dt1);
   struct rtpkt adv;
   for (int i = 0; i < 4; i++) {
     adv.mincost[i] = findMin(dt1.costs[i], 4);
